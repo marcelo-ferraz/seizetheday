@@ -2,24 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
-
-import { CatmModule } from './catm/catm.module';
+import { CatmBoardComponent } from './board/catm-board.component';
+import {CatmCardComponent} from "./card/catm-card.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    CatmBoardComponent,
+    CatmCardComponent
+  ],
+  exports: [
+    CatmBoardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-
-    CatmModule
+    HttpModule
   ],
   providers: [],
-
-  bootstrap: [AppComponent]
+  bootstrap: [CatmBoardComponent]
 })
-export class AppModule { }
+export class CatmModule { }
