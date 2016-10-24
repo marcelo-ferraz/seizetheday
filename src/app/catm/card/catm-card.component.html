@@ -1,4 +1,4 @@
-<div class="well catm-card"  ngclass="{ type === CardType.Black ? 'black-card' : 'white-card' }">
+<div class="well catm-card" [class.black-card]="type === CardType.Black">
 
   <div class="center-block">
       {{ text }}
