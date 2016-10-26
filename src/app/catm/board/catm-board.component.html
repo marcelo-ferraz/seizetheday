@@ -2,16 +2,27 @@
   <div class="row">
     <div class="col-md-2">
       black card
-      <catm-card text="tis is the text to be shown on  the card"></catm-card>
+      <catm-card
+        type="black"
+        text="Tis is the text to be shown on  the Czar card">
+      </catm-card>
     </div>
     <div class="col-md-10">
       all cards
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-4">
-      cards
+  <div class="row white-deck">
+    <h4>Please choose your card:</h4>
+    <div *ngFor="let card of cards;">
+      <div class="player-card col-md-2">
+        <catm-card
+          [type]="card.type"
+          [text]="card.text">
+        </catm-card>
+      </div>
     </div>
+  </div>
+  <div class="row">
     <div class="col-md-4">
       player
     </div>

@@ -1,26 +1,27 @@
 $color-black: #333435;
-$color-white: #e5e5e5;
+$card-width: 250px;
+$card-height: 200px;
 
 .catm-card {
   position: relative;
-  padding: 45px 15px 15px;
+  min-height: 150px;
+  padding: 15px;
   margin: 0 -15px 15px;
-  border-color: #e5e5e5 #eee #eee;
-  border-style: solid;
-  border-width: 1px 0;
+  border: solid 1px #ddd;
   -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
   box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-  width: 200px;
-  height: 250px;
+  color: $color-black;
+  font-weight:700;
+  cursor: pointer;
+  background-color: #fff;
 
-  .white-card {
-    background-color: $color-white;
-    color: $color-black;
-  }
 
-  .black-card {
-    background-color: $color-black;
-    color: $color-white;
-  }
+  -webkit-transition: z-index 2s, width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: z-index 2s, width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.black-card {
+  background-color: $color-black;
+  color: #fff;
 }
 

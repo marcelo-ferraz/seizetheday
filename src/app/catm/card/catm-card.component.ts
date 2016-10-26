@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core/src/metadata/directives';
-import { CardType } from './CardType'
+
 @Component({
   selector: 'catm-card',
   templateUrl: './catm-card.component.html',
@@ -11,11 +11,12 @@ export class CatmCardComponent {
   public text: string;
 
   @Input('type')
-  public type: CardType = CardType.Black;
+  public type: string = 'white';
 
-  public cardClassType : string;
+  public get isBlack () : boolean {
+    return this.type === 'black';
+  }
 
   constructor() {
-    this.cardClassType = this.type === CardType.Black ? 'black' : 'white';
   }
 }
